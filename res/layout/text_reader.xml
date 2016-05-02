@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/titlebar_height"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/secondary_title_background"
+        android:padding="0.0dip" >
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.Preference.PrimaryItem"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="@dimen/size_10" />
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/loading_view"
+        style="@style/Widget.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+    <com.mars.miuifilemanager.view.BorderScrollView
+        android:id="@+id/text_reader_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_bar"
+        android:fadingEdge="none"
+        android:background="@drawable/secondary_title_background">
+
+        <com.mars.miuifilemanager.view.MiTextView
+            android:id="@+id/text_reader"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:gravity="top"
+            android:padding="@dimen/size_5"
+            android:scrollbars="none"
+            android:textAppearance="@style/TextAppearance" 
+            />
+    </com.mars.miuifilemanager.view.BorderScrollView>
+
+</RelativeLayout>

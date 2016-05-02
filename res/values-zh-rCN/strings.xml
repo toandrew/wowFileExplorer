@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">小米文件管理器</string>
+    
+    <string name="tab_category">分类浏览</string>
+    <string name="tab_remote">远程管理</string>
+    <string name="tab_sd">SD卡</string>
+    <string name="no_file">没有文件</string>
+    <string name="enable_sd_card">无可用SD卡，请插入或连接SD卡</string>
+    <string name="category_video">视频</string>
+    <string name="category_picture">图片</string>
+    <string name="category_theme">主题</string>
+    <string name="category_document">文档</string>
+    <string name="category_zip">压缩包</string>
+    <string name="category_apk">安装包</string>
+    <string name="category_other">其它</string>
+    <string name="category_favorite">收藏夹</string>
+    <string name="category_music">音乐</string>
+    <string name="sd_card_name">SD卡:</string>
+    <string name="sd_card_available">可用:</string>
+    <string name="confirm">确定</string>
+    <string name="operation_cancel">取消</string>
+    <string name="operation_delete">删除</string>
+    <string name="operation_install">安装</string>
+    <string name="operation_copy">复制</string>
+    <string name="operation_move">剪切</string>
+    <string name="operation_send">发送</string>
+    <string name="operation_selectall">全选</string>
+
+    <string name="operation_favorite">收藏</string>
+    <string name="operation_unfavorite">取消收藏</string>
+    <string name="operation_rename">重命名</string>
+    <string name="operation_info">详情</string>
+    <string name="operation_paste">粘贴</string>
+    
+    <string name="sd_folder">SD卡</string>
+    <string name="wifi_state">WiFi状态</string>
+    <string name="instruction_pre">启动后可以从电脑端远程管理手机文件</string>
+    <string name="instruction">请在“我的电脑”地址栏中输入：</string>
+    <string name="no_wifi">无WiFi网络</string>
+    <string name="notif_server_starting">远程管理服务已启动</string>
+    <string name="notif_title">远程管理服务正在运行</string>
+    <string name="start_server">启动服务</string>
+    <string name="stop_server">停止服务</string>
+    <string name="storage_warning">外部存储不可用.</string>
+    
+    <string name="dialog_select_type">选择文件类型</string>
+    <string name="dialog_type_text">文本</string>
+    <string name="dialog_type_audio">音频</string>
+    <string name="dialog_type_video">视频</string>
+    <string name="dialog_type_image">图像</string>
+    
+    <string name="added_favorite">已加入收藏夹</string>
+    <string name="removed_favorite">已从收藏夹移除</string>
+    
+    <string name="operation_pasting">正在复制...</string>
+	<string name="operation_moving">正在移动...</string>    
+
+	<string name="operation_delete_confirm_message">确认删除?</string>	    
+	<string name="operation_deleting">正在删除...</string>
+	<string name="cancel">取消</string>
+	
+	<string name="fail_to_rename">重命名失败失败，可能使用该名称的文件或文件夹已存在。</string>
+ 	<string name="operation_rename_message">请输入新名称</string>	
+ 	
+    <string name="file_info_canread">可读:</string>
+    <string name="file_info_canwrite">可写:</string>
+    <string name="file_info_ishidden">隐藏:</string>
+    <string name="file_info_location">位置:</string>
+    <string name="file_info_modified">时间:</string>
+    <string name="file_info_size">大小:</string> 	
+    
+    <string name="yes">是</string>
+	<string name="no">否</string>    
+	<string name="file_size">%d 字节</string>	
+	<string name="confirm_know">知道了</string>	
+	<string name="operation_cancel_selectall">取消全选</string>
+    <string name="menu_item_sort">排序</string>
+    <string name="menu_item_sort_date">时间</string>
+    <string name="menu_item_sort_name">名称</string>
+    <string name="menu_item_sort_size">大小</string>
+    <string name="menu_item_sort_type">类型</string>
+    
+    <string name="operation_create_folder">新建文件夹</string>
+    <string name="operation_create_folder_message">请输入文件夹名称</string>
+    <string name="new_folder_name">新建文件夹</string>
+    <string name="fail_to_create_folder">创建文件夹失败，文件夹已存在。</string>
+    
+	<string name="operation_show_sys">显示点文件和隐藏文件</string> 
+	<string name="operation_hide_sys">隐藏点文件和隐藏文件</string>
+	
+	<string name="operation_refresh">刷新</string>	   
+	<string name="error_info_cant_send_folder">不能发送文件夹</string> 
+	
+	<string name="scan_files">扫描</string>
+	<string name="stop_scanning_files">停止扫描</string>  
+	
+	<string name="category_applications">已安装应用</string>
+	<string name="no_app">没有应用</string>
+	<string name="app_verion">版本：</string>
+	<string name="app_action_info">详情</string>
+	<string name="app_action_run">运行</string>
+	<string name="app_action_uninstall">卸载</string>	
+	<string name="get_app_info_failed">不能获取该应用详细信息!</string>
+	<string name="run_app_failed">不能运行该应用!</string>
+	<string name="uninstall_app_failed">不能删除该应用!</string>
+	
+	<string name="category_about">热门应用</string>
+	<string name="about_declaim"></string>  
+	
+	<string name="scanning">正在查询,请稍侯...</string>	  
+	<string name="failed_open">无法打开该类型的文件!</string>
+	<string name="failed_send">无法发送该类型的文件!</string>
+	
+	<string name="UMEmptyFbNotAllowed">请输入你的反馈内容</string>
+	<string name="UMContentTooLong">超过140字了，再简短一些吧</string>
+	<string name="UMFbList_ListItem_State_ReSend">失败,轻触以重发</string>
+	<string name="UMFbList_ListItem_State_Sending">发送中...</string>
+	<string name="UMFbList_ListItem_State_Fail">发送失败</string>
+	<string name="UMFb_Atom_State_Sending">发送中...</string>
+	<string name="UMFb_Atom_State_Resend">发送失败,轻触以重发</string>
+	<string name="UMFeedbackUmengTitle">反馈意见</string>
+	<string name="UMFeedbackListTitle">我的反馈</string>
+	<string name="UMFeedbackConversationTitle">反馈问题</string>
+	<string name="UMFeedbackTitle">每条建议都将帮助我们做得更好。</string>
+	<string name="UMFeedbackContent">请输入您的反馈意见</string>
+	<string name="UMFeedbackSummit">提交</string>
+	<string-array name="UMageList">
+		<item>年龄</item>
+		<item>18岁以下</item>
+		<item>18-24岁</item>
+		<item>25-30岁</item>
+		<item>31-35岁</item>
+		<item>36-40岁</item>
+		<item>41-50岁</item>
+		<item>51-59岁</item>
+		<item>60岁及以上</item>
+	</string-array>
+	<string-array name="UMgenderList">
+		<item>性别</item>
+		<item>男</item>
+		<item>女</item>
+	</string-array>
+	<string name="UMViewThread">查看反馈</string>
+	<string name="UMNewReplyAlertTitle">您的反馈收到了回复</string>
+	<string name="UMDeleteThread">删除反馈</string>
+	<string name="UMViewFeedback">查看反馈</string>
+	<string name="UMDeleteFeedback">删除反馈</string>
+	<string name="UMResendFeedback">重发反馈</string>
+	<string name="UMDeleteMsg">删除信息</string>
+	<string name="UMNewReplyFlick">有新的回复</string>
+	<string name="UMNewReplyTitle">有新的回复</string>
+	<string name="UMNewReplyHint">点击查看</string>
+
+
+	<string name="UMBreak_Network">未联网</string>
+	<string name="UMUpdateTitle">应用程序有新版本更新</string>
+	<string name="UMNewVersion">最新版本: </string>
+	<string name="UMGprsCondition">（提示：非WIFI环境）</string>
+	<string name="UMUpdateNow">立即更新</string>
+	<string name="UMAppUpdate">应用更新</string>
+	<string name="UMUpdatingNow">正在更新应用程序...</string>
+	<string name="UMNotNow">以后再说</string>
+	<string name="UMToast_IsUpdating">正在更新中....</string>
+	<string name="UMDialog_InstallAPK">最新版本已下载，是否安装？</string>	    
+	    <string name="marsui_editablelistactionbar_all_str">Select all items</string>
+    <string name="marsui_editablelistactionbar_none_str">Select none</string>
+    <string name="marsui_editablelistactionbar_invert_str">Invert select</string>
+    	<string name="scanning_files">Scanning</string>  
+    		<string name="text_editor">Text Editor</string>	
+	
+</resources>

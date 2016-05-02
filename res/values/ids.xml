@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <item type="id" name="marsui_tabhost" />
+    <item type="id" name="marsui_tabs" />
+    <item type="id" name="marsui_tabcontent" />
+    <item type="id" name="marsui_tab_indicator_icon" />
+    <item type="id" name="marsui_tab_indicator_title" />
+</resources>

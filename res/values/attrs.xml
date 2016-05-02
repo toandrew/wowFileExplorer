@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="TabWidget">
+        <attr format="reference" name="divider" />
+        <attr format="boolean" name="tabStripEnabled" />
+        <attr format="reference" name="tabStripLeft" />
+        <attr format="reference" name="tabStripRight" />
+    </declare-styleable>
+    <declare-styleable name="com.wooboo.adlib_android.WoobooAdView">
+        <attr format="color" name="backgroundColor" />
+        <attr format="color" name="textColor" />
+        <attr format="boolean" name="testing" />
+        <attr format="integer" name="refreshInterval" />
+        <attr format="string" name="adType" />
+    </declare-styleable>
+
+</resources>

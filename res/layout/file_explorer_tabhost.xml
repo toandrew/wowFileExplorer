@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mars.miuifilemanager.view.TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@id/marsui_tabhost"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <com.mars.miuifilemanager.view.TabWidget
+            android:id="@id/marsui_tabs"
+
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />     
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+        <FrameLayout
+            android:id="@id/marsui_tabcontent"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0" />
+    </LinearLayout>
+
+</com.mars.miuifilemanager.view.TabHost>
