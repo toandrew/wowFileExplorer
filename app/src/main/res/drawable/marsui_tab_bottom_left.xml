@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2010, Marvell International Ltd. All rights reserved.
+     Marvell International Ltd. Confidential Proprietary
+     Contains confidential proprietary information of Marvell International Ltd.
+     Reverse engineering is prohibited.
+     The copyright notice does not imply publication.
+-->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:drawable="@drawable/marsui_tab_press_bar_left" />
+    <item android:state_focused="false" android:drawable="@drawable/marsui_tab_selected_bar_left" />
+    <item android:state_focused="true" android:drawable="@drawable/marsui_tab_focus_bar_left" />
+</selector>
