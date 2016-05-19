@@ -545,7 +545,7 @@
                 <com.mars.miuifilemanager.view.CategoryBar
                     android:id="@+id/category_bar"
                     android:layout_width="fill_parent"
-                    android:layout_height="35.0px"
+                    android:layout_height="30.0dip"
                     android:layout_gravity="center"
                     android:layout_marginBottom="5.0dip" />
 

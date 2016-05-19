@@ -7,6 +7,9 @@ import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.AdListener;
 import com.mars.miuifilemanager.R;
 
+import android.graphics.Color;
+import android.util.Log;
+import android.view.View;
 import android.widget.RelativeLayout;
 
 import android.view.ViewGroup;
@@ -18,11 +21,12 @@ public class AdManager {
     public AdManager(Activity activity) {
         mActivity = activity;
 
+
         ViewGroup contentView = (ViewGroup)activity.findViewById(R.id.file_browse_list);
         mAdView = new AdView(activity);
         mAdView.setAdUnitId("ca-app-pub-7879734750226076/3171204749");
         mAdView.setAdSize(AdSize.BANNER);
-        mAdView.setAdListener(new AdListener(){});
+        mAdView.setBackgroundResource(R.drawable.list_item_background_normal);
         RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
                 RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, RelativeLayout.TRUE);
