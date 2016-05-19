@@ -52,6 +52,7 @@ import com.mars.miuifilemanager.utils.PackageInstallHelper;
 import com.mars.miuifilemanager.utils.Util;
 import com.mars.miuifilemanager.utils.Util.SDCardInfo;
 import com.mars.miuifilemanager.view.CategoryBar;
+import com.umeng.message.PushAgent;
 
 public class FileCategoryActivity extends Activity 
 	implements FavoriteDatabaseHelper.FavoriteDatabaseListener, IFileInteractionListener {
@@ -478,6 +479,8 @@ public class FileCategoryActivity extends Activity
         ActivitiesManager.getInstance().registerActivity("FileCategory", this);
         
         mHandler.sendEmptyMessageDelayed(MSG_INIT_UPDATE_UI,500);
+
+		PushAgent.getInstance(this).onAppStart();
     }
 
     //private WoobooAdView mAdView;

@@ -21,6 +21,6 @@ android {
 dependencies {
     compile files('libs/AndroidAnalyticSDK3.1.1.jar')
     compile files('libs/yjfsdk_10.jar')
-
+    compile project(':PushSDK');
     compile 'com.google.android.gms:play-services-ads:8.4.0'
 }

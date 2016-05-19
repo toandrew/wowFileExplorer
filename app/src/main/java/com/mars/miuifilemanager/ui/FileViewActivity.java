@@ -45,6 +45,7 @@ import com.mars.miuifilemanager.utils.FileSortHelper.SortMethod;
 import com.mars.miuifilemanager.utils.Settings;
 import com.mars.miuifilemanager.utils.Util;
 import com.mars.miuifilemanager.R;
+import com.umeng.message.PushAgent;
 
 public class FileViewActivity extends Activity implements IFileInteractionListener{
 	private static final String TAG = "FileViewActivity";
@@ -234,6 +235,8 @@ public class FileViewActivity extends Activity implements IFileInteractionListen
 
 		mAdManager = new AdManager(this);
 		mAdManager.onCreate();
+
+		PushAgent.getInstance(this).onAppStart();
     }
     
 	@Override

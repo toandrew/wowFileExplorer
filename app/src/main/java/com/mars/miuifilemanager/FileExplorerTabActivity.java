@@ -23,6 +23,7 @@ import com.mars.miuifilemanager.utils.ActivitiesManager;
 import com.mars.miuifilemanager.view.TabActivity;
 import com.mars.miuifilemanager.view.TabHost;
 import com.mars.miuifilemanager.view.TabHost.OnTabChangeListener;
+import com.umeng.message.PushAgent;
 
 public class FileExplorerTabActivity extends TabActivity {
 	private static final String TAG = "FileExplorerTabActivity";
@@ -65,6 +66,11 @@ public class FileExplorerTabActivity extends TabActivity {
 		}
 
 		setTabHostAppearance(i);
+
+		PushAgent mPushAgent = PushAgent.getInstance(context);
+		mPushAgent.enable();
+
+		PushAgent.getInstance(context).onAppStart();
 	}
 
 	private void InitViewPager() {

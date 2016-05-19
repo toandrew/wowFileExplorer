@@ -30,6 +30,7 @@ import android.widget.Toast;
 import com.mars.miuifilemanager.service.FTPServerService;
 import com.mars.miuifilemanager.utils.ActivitiesManager;
 import com.mars.miuifilemanager.R;
+import com.umeng.message.PushAgent;
 
 public class ServerControlActivity extends Activity {
 	private static final String TAG = "ServerControlActivity";
@@ -141,6 +142,8 @@ public class ServerControlActivity extends Activity {
         updateUi();
         
         mHandler.sendEmptyMessageDelayed(MSG_ID_AD, 1000);
+
+		PushAgent.getInstance(this).onAppStart();
     }
     
     protected void onResume() {
