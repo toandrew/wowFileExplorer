@@ -29,8 +29,8 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.feedback.NotificationType;
-import com.feedback.UMFeedbackService;
+//import com.feedback.NotificationType;
+//import com.feedback.UMFeedbackService;
 //import com.wooboo.adlib_android.WoobooAdView;
 import com.mars.miuifilemanager.FileExplorerTabActivity;
 import com.mars.miuifilemanager.R;
@@ -52,6 +52,7 @@ import com.mars.miuifilemanager.utils.PackageInstallHelper;
 import com.mars.miuifilemanager.utils.Util;
 import com.mars.miuifilemanager.utils.Util.SDCardInfo;
 import com.mars.miuifilemanager.view.CategoryBar;
+import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
 
 public class FileCategoryActivity extends Activity 
@@ -141,7 +142,7 @@ public class FileCategoryActivity extends Activity
 				break;
 
 			case R.id.about_app_feedback:
-				UMFeedbackService.openUmengFeedbackSDK(FileCategoryActivity.this);
+				//UMFeedbackService.openUmengFeedbackSDK(FileCategoryActivity.this);
 				break;
 
 			default:
@@ -445,7 +446,7 @@ public class FileCategoryActivity extends Activity
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         
-		UMFeedbackService.enableNewReplyNotification(this, NotificationType.AlertDialog);
+		//UMFeedbackService.enableNewReplyNotification(this, NotificationType.AlertDialog);
 
         Log.e(TAG, "onCreate!");
         
@@ -502,12 +503,16 @@ public class FileCategoryActivity extends Activity
 	protected void onResume() {
 		super.onResume();
 		Log.e(TAG, "onResume");
+
+		MobclickAgent.onResume(this);
 	}
 	
 	@Override
 	protected void onPause() {
 		super.onPause();
 		Log.e(TAG, "onPause");
+
+		MobclickAgent.onPause(this);
 	}
 
 	@Override

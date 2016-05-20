@@ -45,6 +45,7 @@ import com.mars.miuifilemanager.utils.FileSortHelper.SortMethod;
 import com.mars.miuifilemanager.utils.Settings;
 import com.mars.miuifilemanager.utils.Util;
 import com.mars.miuifilemanager.R;
+import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
 
 public class FileViewActivity extends Activity implements IFileInteractionListener{
@@ -245,6 +246,8 @@ public class FileViewActivity extends Activity implements IFileInteractionListen
 		Log.e(TAG, "onResume");
 
 		mAdManager.onResume();
+
+		MobclickAgent.onResume(this);
 	}
 	
 	@Override
@@ -253,6 +256,8 @@ public class FileViewActivity extends Activity implements IFileInteractionListen
 		Log.e(TAG, "onPause");
 
 		mAdManager.onPause();
+
+		MobclickAgent.onPause(this);
 	}
 	
 	protected void onDestroy() {

@@ -30,6 +30,7 @@ import android.widget.Toast;
 import com.mars.miuifilemanager.service.FTPServerService;
 import com.mars.miuifilemanager.utils.ActivitiesManager;
 import com.mars.miuifilemanager.R;
+import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
 
 public class ServerControlActivity extends Activity {
@@ -156,6 +157,8 @@ public class ServerControlActivity extends Activity {
 		registerReceiver(mWifiReceiver, filter);
 		
 		Log.e(TAG, "onResume");
+
+		MobclickAgent.onResume(this);
     }
     
 	protected void onDestroy() {
@@ -173,7 +176,9 @@ public class ServerControlActivity extends Activity {
 		if (mWifiReceiver != null) {
 			unregisterReceiver(mWifiReceiver);
 		}
-		
+
+		MobclickAgent.onPause(this);
+
 		Log.e(TAG, "onPause");
 	}
 	

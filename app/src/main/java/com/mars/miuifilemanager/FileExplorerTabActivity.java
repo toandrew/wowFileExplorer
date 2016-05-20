@@ -23,6 +23,7 @@ import com.mars.miuifilemanager.utils.ActivitiesManager;
 import com.mars.miuifilemanager.view.TabActivity;
 import com.mars.miuifilemanager.view.TabHost;
 import com.mars.miuifilemanager.view.TabHost.OnTabChangeListener;
+import com.umeng.analytics.MobclickAgent;
 import com.umeng.message.PushAgent;
 
 public class FileExplorerTabActivity extends TabActivity {
@@ -137,6 +138,8 @@ public class FileExplorerTabActivity extends TabActivity {
 		super.onResume();
 
 		mManager.dispatchResume();
+
+		MobclickAgent.onResume(this);
 		
 		Log.e(TAG, "onResume: cat:" + mManager.getCurrentId());
 	}
@@ -146,6 +149,8 @@ public class FileExplorerTabActivity extends TabActivity {
 		super.onPause();
 		mManager.dispatchPause(isFinishing());
 		Log.e(TAG,"onPause");
+
+		MobclickAgent.onPause(this);
 	}
 	
 	private View getView(String id, Intent intent) {
