@@ -13,9 +13,29 @@ android {
         versionCode 14
     }
 
+
+    signingConfigs {
+        debug {
+        }
+
+        release {
+            storeFile file("./my_keystore")
+            storePassword STORE_PASSWORD
+            keyAlias KEY_ALIAS
+            keyPassword KEY_PASSWORD
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
     buildTypes {
         release {
             minifyEnabled false
+            zipAlignEnabled true
+            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }
