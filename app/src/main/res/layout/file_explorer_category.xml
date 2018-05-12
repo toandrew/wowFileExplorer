@@ -225,7 +225,7 @@
                     android:textAppearance="@style/TextAppearance.Small" />
 
                 <LinearLayout
-                    android:id="@+id/about_app_feedback"
+                    android:id="@+id/about_app_support"
                     android:layout_width="100.0dip"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -233,13 +233,12 @@
                     android:gravity="center" >
 
                     <TextView
-                        android:id="@+id/feedback_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:drawablePadding="10.0px"
                         android:gravity="center"
-                        android:text="@string/UMFeedbackUmengTitle"
-                        android:textAppearance="@style/TextAppearance.Small" />
+                        android:text="@string/support"
+                        android:textAppearance="@style/TextAppearance.Small.Green" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>

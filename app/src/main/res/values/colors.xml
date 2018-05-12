@@ -121,4 +121,5 @@
      <color name="hint_foreground">#ff808080</color>
      <color name="highlight_color">#ffff9200</color>
      <color name="textColorLink">#ff5c5cff</color>
+    <color name="textColorGreen">#008B00</color>
 </resources>

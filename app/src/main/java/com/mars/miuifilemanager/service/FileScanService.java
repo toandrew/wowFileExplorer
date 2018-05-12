@@ -378,8 +378,7 @@ public class FileScanService extends Service implements Runnable {
 		boolean removed = removeUselessItemsInDb();
 
 		// send Broadcast intent to update ui
-		Intent intent = new Intent(ACTION_UPDATE_UI, Uri.parse("file://"
-				+ Environment.getExternalStorageDirectory().getAbsolutePath()));
+		Intent intent = new Intent(ACTION_UPDATE_UI);
 		if (inserted || removed) {
 			Log.v(TAG, "send " + ACTION_UPDATE_UI + " event to update ui!");
 			intent.putExtra(ACTION_UPDATE_UI_ARGS, true);

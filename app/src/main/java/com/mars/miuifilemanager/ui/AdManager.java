@@ -1,26 +1,23 @@
 package com.mars.miuifilemanager.ui;
 
 import android.app.Activity;
+import android.view.ViewGroup;
+import android.widget.RelativeLayout;
+
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.MobileAds;
 import com.mars.miuifilemanager.R;
 
-import android.graphics.Color;
-import android.util.Log;
-import android.view.View;
-import android.widget.RelativeLayout;
-
-import android.view.ViewGroup;
-
 public class AdManager {
-    private Activity mActivity;
+//    private Activity mActivity;
     AdView mAdView;
 
     public AdManager(Activity activity) {
-        mActivity = activity;
+//        mActivity = activity;
 
+        MobileAds.initialize(activity.getApplication(), "ca-app-pub-7879734750226076~9357339142");
 
         ViewGroup contentView = (ViewGroup)activity.findViewById(R.id.file_browse_list);
         mAdView = new AdView(activity);

@@ -4,21 +4,33 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.database.Cursor;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v4.content.PermissionChecker;
+import android.text.util.Linkify;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -28,6 +40,7 @@ import android.view.Window;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 //import com.feedback.NotificationType;
 //import com.feedback.UMFeedbackService;
@@ -52,8 +65,6 @@ import com.mars.miuifilemanager.utils.PackageInstallHelper;
 import com.mars.miuifilemanager.utils.Util;
 import com.mars.miuifilemanager.utils.Util.SDCardInfo;
 import com.mars.miuifilemanager.view.CategoryBar;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.message.PushAgent;
 
 public class FileCategoryActivity extends Activity 
 	implements FavoriteDatabaseHelper.FavoriteDatabaseListener, IFileInteractionListener {
@@ -91,6 +102,8 @@ public class FileCategoryActivity extends Activity
 	private static final int MSG_REFRESH_APP 			= 103;
 	private static final int MSG_STOP_SCAN_PROGRESS_BAR = 104;
 	public static final int MSG_FAV_UPDATED				= 105;
+
+	private FullAdManager mAdManager = null;
 	
 	public static enum ViewPage {
 		Home,
@@ -141,8 +154,10 @@ public class FileCategoryActivity extends Activity
 				onOperationInstall();
 				break;
 
-			case R.id.about_app_feedback:
-				//UMFeedbackService.openUmengFeedbackSDK(FileCategoryActivity.this);
+			case R.id.about_app_support:
+				Toast.makeText(FileCategoryActivity.this, R.string.thanks, Toast.LENGTH_SHORT).show();
+				
+				mAdManager.onCreate();
 				break;
 
 			default:
@@ -153,7 +168,7 @@ public class FileCategoryActivity extends Activity
 				}
 				
 				if (category == FileCategory.About) {
-					return;
+					//return;
 				}
 				
 				onCategorySelected(category);
@@ -323,22 +338,22 @@ public class FileCategoryActivity extends Activity
 			break;
 			
 		case About:
-//			showView(R.id.navigation_bar, true); //0x7f08000d
-//			TextView appNameView = (TextView)findViewById(R.id.about_app_name);
-//			String ver = getVersion();
-//			appNameView.setText(getString(R.string.app_name) + " V"+ ver);
-//		
-//			TextView appInfoView = (TextView)findViewById(R.id.about_app_info);
-//			final String contact = "www.miui.com\n";
-//			appInfoView.setAutoLinkMask(Linkify.ALL);
-//			appInfoView.setText(contact);
-//			
-//			TextView emailView = (TextView)findViewById(R.id.about_app_email);
-//			final String email = "Email: andalululu@sina.com\n";
-//			emailView.setAutoLinkMask(Linkify.ALL);
-//			emailView.setText(email);
-//			
-//			showView(R.id.about_page, true);
+			showView(R.id.navigation_bar, true); //0x7f08000d
+			TextView appNameView = (TextView)findViewById(R.id.about_app_name);
+			String ver = getVersion();
+			appNameView.setText(getString(R.string.app_name) + " V"+ ver);
+
+			TextView appInfoView = (TextView)findViewById(R.id.about_app_info);
+			final String contact = "www.crossker.com\n";
+			appInfoView.setAutoLinkMask(Linkify.ALL);
+			appInfoView.setText(contact);
+
+			TextView emailView = (TextView)findViewById(R.id.about_app_email);
+			final String email = "Email: andalululu@sina.com\n";
+			emailView.setAutoLinkMask(Linkify.ALL);
+			emailView.setText(email);
+
+			showView(R.id.about_page, true);
 			break;
 			
 		case NoSD:
@@ -479,9 +494,13 @@ public class FileCategoryActivity extends Activity
         
         ActivitiesManager.getInstance().registerActivity("FileCategory", this);
         
-        mHandler.sendEmptyMessageDelayed(MSG_INIT_UPDATE_UI,500);
 
-		PushAgent.getInstance(this).onAppStart();
+
+//		PushAgent.getInstance(this).onAppStart();
+
+		mHandler.sendEmptyMessageDelayed(MSG_INIT_UPDATE_UI,500);
+
+		mAdManager = new FullAdManager(this);
     }
 
     //private WoobooAdView mAdView;
@@ -504,7 +523,7 @@ public class FileCategoryActivity extends Activity
 		super.onResume();
 		Log.e(TAG, "onResume");
 
-		MobclickAgent.onResume(this);
+		mAdManager.onResume();
 	}
 	
 	@Override
@@ -512,7 +531,7 @@ public class FileCategoryActivity extends Activity
 		super.onPause();
 		Log.e(TAG, "onPause");
 
-		MobclickAgent.onPause(this);
+		mAdManager.onPause();
 	}
 
 	@Override
@@ -532,6 +551,9 @@ public class FileCategoryActivity extends Activity
 		}
 
 		ActivitiesManager.getInstance().unRegisterActivity("FileCategory");
+
+
+		mAdManager.onDestroy();
 	}
 	
 	protected void onSaveInstanceState(Bundle outState) {
@@ -713,7 +735,7 @@ public class FileCategoryActivity extends Activity
 		setupClick(R.id.category_applications);
 		setupClick(R.id.category_about);
 		
-		setupClick(R.id.about_app_feedback);
+		setupClick(R.id.about_app_support);
 	}
 
 	private void setupClick(int id) {

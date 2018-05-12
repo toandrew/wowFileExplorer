@@ -2,56 +2,41 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mars.miuifilemanager"
     android:versionCode="4"
-    android:versionName="1.2" >
+    android:versionName="1.2">
 
-    <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="17"/>
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:xlargeScreens="true" />
 
-    <supports-screens android:normalScreens="true"
-                      android:largeScreens="true"
-                      android:xlargeScreens="true"/>
 
-    
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.INTERNET" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" >
-    </uses-permission>
-    <uses-permission android:name="android.permission.READ_LOGS" >
-    </uses-permission>
-    
-   <uses-permission android:name="android.permission.INTERNET" />
-   <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
         android:icon="@drawable/icon"
-        android:label="@string/app_name" >
+        android:label="@string/app_name">
         <activity
+            android:name="com.mars.miuifilemanager.FileExplorerTabActivity"
             android:label="@string/app_name"
             android:launchMode="singleTask"
-            android:name="com.mars.miuifilemanager.FileExplorerTabActivity"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.NoTitleBar" >
-            <intent-filter >
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mars.miuifilemanager.ui.FileViewActivity" 
+        <activity
+            android:name="com.mars.miuifilemanager.ui.FileViewActivity"
             android:launchMode="singleTask">
-            <intent-filter >
+            <intent-filter>
                 <action android:name="android.intent.action.PICK" />
 
                 <category android:name="android.intent.category.DEFAULT" />
@@ -62,9 +47,10 @@
                 <data android:scheme="file" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mars.miuifilemanager.ui.FileCategoryActivity"
-            android:launchMode="singleTask" >
-            <intent-filter >
+        <activity
+            android:name="com.mars.miuifilemanager.ui.FileCategoryActivity"
+            android:launchMode="singleTask">
+            <intent-filter>
                 <action android:name="android.intent.action.MEDIA_SCANNER_FINISHED" />
                 <action android:name="android.intent.action.MEDIA_MOUNTED" />
                 <action android:name="android.intent.action.MEDIA_UNMOUNTED" />
@@ -72,33 +58,27 @@
                 <data android:scheme="file" />
             </intent-filter>
         </activity>
-        <activity android:name="com.mars.miuifilemanager.ui.ServerControlActivity" 
-            android:launchMode="singleTask"/>
         <activity
-            android:name="com.feedback.ui.SendFeedback"
-            android:windowSoftInputMode="adjustResize" >
-        </activity>
-        <activity android:name="com.feedback.ui.FeedbackConversations" >
-        </activity>
-        <activity
-            android:configChanges="keyboard"
-            android:name="com.feedback.ui.FeedbackConversation" >
-        </activity>
+            android:name="com.mars.miuifilemanager.ui.ServerControlActivity"
+            android:launchMode="singleTask" />
 
         <service android:name="com.mars.miuifilemanager.service.FTPServerService" />
         <service
-            android:label="FileScanService"
-            android:name="com.mars.miuifilemanager.service.FileScanService" />
+            android:name="com.mars.miuifilemanager.service.FileScanService"
+            android:label="FileScanService" />
 
         <provider
-            android:authorities="wowfileexplorerv3"
-            android:name="com.mars.miuifilemanager.provider.WowFileProvider" />
-        
-        <activity android:name="com.mars.miuifilemanager.ui.TextReaderActivity" 
+            android:name="com.mars.miuifilemanager.provider.WowFileProvider"
+            android:authorities="wowfileexplorerv3" />
+
+        <activity
+            android:name="com.mars.miuifilemanager.ui.TextReaderActivity"
             android:configChanges="locale|keyboard|keyboardHidden|orientation"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity android:label="@string/text_editor" android:name="com.mars.miuifilemanager.ui.TextEditorActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.mars.miuifilemanager.ui.TextEditorActivity"
             android:configChanges="locale|keyboard|keyboardHidden|orientation"
+            android:label="@string/text_editor"
             android:windowSoftInputMode="adjustPan|stateHidden">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
@@ -106,21 +86,20 @@
                 <data android:mimeType="text/plain" />
             </intent-filter>
         </activity>
-                
+
         <meta-data
             android:name="UMENG_APPKEY"
-            android:value="4f2f488752701549b1000004" >
-        </meta-data>
+            android:value="4f2f488752701549b1000004"></meta-data>
         <meta-data
             android:name="UMENG_CHANNEL"
-            android:value="admob" />
+            android:value="admob_google_play" />
 
         <meta-data
             android:name="UMENG_MESSAGE_SECRET"
-            android:value="c795087786908c08141a8f64bfe6946c" >
-        </meta-data>
+            android:value="c795087786908c08141a8f64bfe6946c"></meta-data>
 
-        <meta-data android:name="com.google.android.gms.version"
+        <meta-data
+            android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
     </application>
 

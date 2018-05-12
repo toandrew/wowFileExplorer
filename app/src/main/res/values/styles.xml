@@ -156,7 +156,13 @@
         <item name="android:textStyle">normal</item>
         <item name="android:textColor">@color/mi_dim_foreground_light</item>
     </style>
-            
+
+    <style name="TextAppearance.Small.Green" parent="@style/TextAppearance">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/textColorGreen</item>
+    </style>
+
     <style name="Widget">
         <item name="android:textAppearance">@style/TextAppearance</item>
     </style>    

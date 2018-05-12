@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">CrossKrFileManager</string>
-    
+
     <string name="tab_category">Browse</string>
     <string name="tab_remote">FTP</string>
     <string name="tab_sd">SD card</string>
@@ -26,153 +26,158 @@
     <string name="operation_move">Move</string>
     <string name="operation_send">Send</string>
     <string name="operation_selectall">Select All</string>
-    
+
     <string name="marsui_editablelistactionbar_all_str">Select all items</string>
     <string name="marsui_editablelistactionbar_none_str">Select none</string>
     <string name="marsui_editablelistactionbar_invert_str">Invert select</string>
-    
+
     <string name="operation_favorite">Add to Favorites</string>
     <string name="operation_unfavorite">Remove from Favorites</string>
     <string name="operation_rename">Rename</string>
     <string name="operation_info">Details</string>
     <string name="operation_paste">Paste</string>
-    
+
     <string name="sd_folder">SD card</string>
     <string name="wifi_state">WLAN Status</string>
     <string name="instruction_pre">Start service to enable FTP server</string>
     <string name="instruction">Enter the following address into your FTP Client:</string>
-    
+
     <string name="no_wifi">No Wi-Fi network</string>
     <string name="notif_server_starting">FTP Server started</string>
     <string name="notif_title">FTP Server</string>
     <string name="start_server">Start Service</string>
     <string name="stop_server">Stop Service</string>
     <string name="storage_warning">External storage is not available or cannot be read</string>
-    
+
     <string name="dialog_select_type">Select file type</string>
     <string name="dialog_type_text">Text</string>
     <string name="dialog_type_audio">Audio</string>
     <string name="dialog_type_video">Video</string>
     <string name="dialog_type_image">Image</string>
-    
+
     <string name="added_favorite">Added to Favorites</string>
-	<string name="removed_favorite">Removed from Favorites</string>    
-	
-	<string name="operation_moving">Moving...</string>
-	<string name="operation_pasting">Pasting...</string>
-	
-	<string name="operation_delete_confirm_message">Confirm Deletion?</string>
-	<string name="operation_deleting">Deleting...</string>
-	<string name="cancel">Cancel</string>
-	
-	<string name="fail_to_rename">Failed to rename the file or folder as it already exists</string>
-	<string name="operation_rename_message">Enter a new name</string>
-	
+    <string name="removed_favorite">Removed from Favorites</string>
+
+    <string name="operation_moving">Moving...</string>
+    <string name="operation_pasting">Pasting...</string>
+
+    <string name="operation_delete_confirm_message">Confirm Deletion?</string>
+    <string name="operation_deleting">Deleting...</string>
+    <string name="cancel">Cancel</string>
+
+    <string name="fail_to_rename">Failed to rename the file or folder as it already exists</string>
+    <string name="operation_rename_message">Enter a new name</string>
+
     <string name="file_info_canread">Readable:</string>
     <string name="file_info_canwrite">Writable:</string>
     <string name="file_info_ishidden">Hidden:</string>
     <string name="file_info_location">Path:</string>
     <string name="file_info_modified">Modified:</string>
-    <string name="file_info_size">Size:</string>	
-    
-	<string name="yes">Yes</string>       
-	<string name="no">No</string>
-	<string name="file_size">%d Bytes</string>
-	<string name="confirm_know">OK</string>
-	<string name="operation_cancel_selectall">Deselect All</string>	
-	
+    <string name="file_info_size">Size:</string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="file_size">%d Bytes</string>
+    <string name="confirm_know">OK</string>
+    <string name="operation_cancel_selectall">Deselect All</string>
+
     <string name="menu_item_sort">Sort by</string>
     <string name="menu_item_sort_date">Date</string>
     <string name="menu_item_sort_name">Name</string>
     <string name="menu_item_sort_size">Size</string>
-    <string name="menu_item_sort_type">Type</string>	
-    
+    <string name="menu_item_sort_type">Type</string>
+
     <string name="operation_create_folder">New folder</string>
-    <string name="operation_create_folder_message">Enter folder name</string>  
+    <string name="operation_create_folder_message">Enter folder name</string>
     <string name="new_folder_name">New folder</string>
     <string name="fail_to_create_folder">Failed to create the folder, the folder already exists</string>
-    
-	<string name="operation_show_sys">Show hidden files</string>      
-	<string name="operation_hide_sys">Hide hidden files</string> 
-	
-	<string name="operation_refresh">Refresh</string>	
-	<string name="error_info_cant_send_folder">Unable to send the folder</string>
-	
-	<string name="scan_files">Scan</string>
-	<string name="scanning_files">Scanning</string>  
-	
-	<string name="category_applications">Apps</string>
-	<string name="no_app">No Applications</string>
-	<string name="app_verion">Version:</string>
-	<string name="app_action_info">Details</string>
-	<string name="app_action_run">Run</string>
-	<string name="app_action_uninstall">Uninstall</string>
-	<string name="get_app_info_failed">Failed to get app info!</string>
-	<string name="run_app_failed">Failed to run this app!</string>
-	<string name="uninstall_app_failed">Failed to uninstall this app!</string>
-	
-	<string name="category_about">Applications</string>
-	<string name="about_declaim"></string>
-	
-	<string name="scanning">Scanning,please wait...</string>	 
-	<string name="failed_open">Failed to open this file!</string>
-	<string name="failed_send">Failed to send this file!</string>
-	
-	<string name="text_editor">Text Editor</string>	
-	
-	<string name="UMEmptyFbNotAllowed">Please input your feedback.</string>
-	<string name="UMContentTooLong">Your content was over 140 characters. You\'ll have
+
+    <string name="operation_show_sys">Show hidden files</string>
+    <string name="operation_hide_sys">Hide hidden files</string>
+
+    <string name="operation_refresh">Refresh</string>
+    <string name="error_info_cant_send_folder">Unable to send the folder</string>
+
+    <string name="scan_files">Scan</string>
+    <string name="scanning_files">Scanning</string>
+
+    <string name="category_applications">Apps</string>
+    <string name="no_app">No Applications</string>
+    <string name="app_verion">Version:</string>
+    <string name="app_action_info">Details</string>
+    <string name="app_action_run">Run</string>
+    <string name="app_action_uninstall">Uninstall</string>
+    <string name="get_app_info_failed">Failed to get app info!</string>
+    <string name="run_app_failed">Failed to run this app!</string>
+    <string name="uninstall_app_failed">Failed to uninstall this app!</string>
+
+    <string name="category_about">About</string>
+    <string name="about_declaim"></string>
+
+    <string name="scanning">Scanning,please wait...</string>
+    <string name="failed_open">Failed to open this file!</string>
+    <string name="failed_send">Failed to send this file!</string>
+
+    <string name="text_editor">Text Editor</string>
+
+    <string name="UMEmptyFbNotAllowed">Please input your feedback.</string>
+    <string name="UMContentTooLong">Your content was over 140 characters. You\'ll have
 		to be more clever.</string>
-	<string name="UMFbList_ListItem_State_ReSend">Fail,Press to resend</string>
-	<string name="UMFbList_ListItem_State_Sending">Sending...</string>
-	<string name="UMFbList_ListItem_State_Fail">Fail</string>
-	<string name="UMFb_Atom_State_Sending">Sending...</string>
-	<string name="UMFb_Atom_State_Resend">Fail,press to resend</string>
-	<string name="UMFeedbackUmengTitle">Feedback</string>
-	<string name="UMFeedbackListTitle">My Feedback</string>
-	<string name="UMFeedbackConversationTitle">My Feedback</string>
-	<string name="UMFeedbackTitle">Every word you write will benefit us.</string>
-	<string name="UMFeedbackContent">Input your suggestions here</string>
-	<string name="UMFeedbackSummit">Submit</string>
-	<string-array name="UMageList">
-		<item>Age</item>
-		<item>&lt;18</item>
-		<item>18~24</item>
-		<item>25~30</item>
-		<item>31~35</item>
-		<item>36~40</item>
-		<item>41~50</item>
-		<item>51~59</item>
-		<item>>=60</item>
-	</string-array>
-	<string-array name="UMgenderList">
-		<item>Gender</item>
-		<item>Male</item>
-		<item>Female</item>
-	</string-array>
-	<string name="UMViewThread">View Thread</string>
-	<string name="UMNewReplyAlertTitle">You\'ve got reply</string>
-	<string name="UMDeleteThread">Delete Thread</string>
-	<string name="UMViewFeedback">View Feedback</string>
-	<string name="UMDeleteFeedback">Delete Feedback</string>
-	<string name="UMResendFeedback">Resend Feedback</string>
-	<string name="UMDeleteMsg">Delete message</string>
-	<string name="UMNewReplyFlick"> Got new reply</string>
-	<string name="UMNewReplyTitle"> Got new reply</string>
-	<string name="UMNewReplyHint"> Click to view</string>
+    <string name="UMFbList_ListItem_State_ReSend">Fail,Press to resend</string>
+    <string name="UMFbList_ListItem_State_Sending">Sending...</string>
+    <string name="UMFbList_ListItem_State_Fail">Fail</string>
+    <string name="UMFb_Atom_State_Sending">Sending...</string>
+    <string name="UMFb_Atom_State_Resend">Fail,press to resend</string>
+    <string name="UMFeedbackUmengTitle">Feedback</string>
+    <string name="UMFeedbackListTitle">My Feedback</string>
+    <string name="UMFeedbackConversationTitle">My Feedback</string>
+    <string name="UMFeedbackTitle">Every word you write will benefit us.</string>
+    <string name="UMFeedbackContent">Input your suggestions here</string>
+    <string name="UMFeedbackSummit">Submit</string>
+    <string-array name="UMageList">
+        <item>Age</item>
+        <item>&lt;18</item>
+        <item>18~24</item>
+        <item>25~30</item>
+        <item>31~35</item>
+        <item>36~40</item>
+        <item>41~50</item>
+        <item>51~59</item>
+        <item>>=60</item>
+    </string-array>
+    <string-array name="UMgenderList">
+        <item>Gender</item>
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+    <string name="UMViewThread">View Thread</string>
+    <string name="UMNewReplyAlertTitle">You\'ve got reply</string>
+    <string name="UMDeleteThread">Delete Thread</string>
+    <string name="UMViewFeedback">View Feedback</string>
+    <string name="UMDeleteFeedback">Delete Feedback</string>
+    <string name="UMResendFeedback">Resend Feedback</string>
+    <string name="UMDeleteMsg">Delete message</string>
+    <string name="UMNewReplyFlick"> Got new reply</string>
+    <string name="UMNewReplyTitle"> Got new reply</string>
+    <string name="UMNewReplyHint"> Click to view</string>
 
 
-	<string name="UMBreak_Network">Please make sure you are connected to internet,
+    <string name="UMBreak_Network">Please make sure you are connected to internet,
 		update failed</string>
-	<string name="UMUpdateTitle">New version found</string>
-	<string name="UMNewVersion">Latest version: </string>
-	<string name="UMGprsCondition">(Warning: Not WIFI Condition)</string>
-	<string name="UMUpdateNow">Update now</string>
-	<string name="UMAppUpdate">App updating</string>
-	<string name="UMUpdatingNow">Updating application...</string>
-	<string name="UMNotNow">Not now</string>
-	<string name="UMToast_IsUpdating">Is updating...</string>
-	<string name="UMDialog_InstallAPK">The lastest version has been downloaded, install
-		now ?</string>	    
-			<string name="stop_scanning_files">停止扫描</string> 
+    <string name="UMUpdateTitle">New version found</string>
+    <string name="UMNewVersion">Latest version: </string>
+    <string name="UMGprsCondition">(Warning: Not WIFI Condition)</string>
+    <string name="UMUpdateNow">Update now</string>
+    <string name="UMAppUpdate">App updating</string>
+    <string name="UMUpdatingNow">Updating application...</string>
+    <string name="UMNotNow">Not now</string>
+    <string name="UMToast_IsUpdating">Is updating...</string>
+    <string name="UMDialog_InstallAPK">The lastest version has been downloaded, install
+		now ?</string>
+    <string name="stop_scanning_files">Stop Scan!</string>
+
+
+    <string name="support">Support!</string>
+    <string name="thanks">Thank You!</string>
+    <string name="noperm">Please allow the request permissions!</string>
 </resources>

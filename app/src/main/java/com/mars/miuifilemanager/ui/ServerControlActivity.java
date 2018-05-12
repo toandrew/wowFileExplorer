@@ -26,12 +26,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-//import com.wooboo.adlib_android.WoobooAdView;
 import com.mars.miuifilemanager.service.FTPServerService;
 import com.mars.miuifilemanager.utils.ActivitiesManager;
 import com.mars.miuifilemanager.R;
-import com.umeng.analytics.MobclickAgent;
-import com.umeng.message.PushAgent;
 
 public class ServerControlActivity extends Activity {
 	private static final String TAG = "ServerControlActivity";
@@ -144,7 +141,7 @@ public class ServerControlActivity extends Activity {
         
         mHandler.sendEmptyMessageDelayed(MSG_ID_AD, 1000);
 
-		PushAgent.getInstance(this).onAppStart();
+//		PushAgent.getInstance(this).onAppStart();
     }
     
     protected void onResume() {
@@ -157,8 +154,6 @@ public class ServerControlActivity extends Activity {
 		registerReceiver(mWifiReceiver, filter);
 		
 		Log.e(TAG, "onResume");
-
-		MobclickAgent.onResume(this);
     }
     
 	protected void onDestroy() {
@@ -176,8 +171,6 @@ public class ServerControlActivity extends Activity {
 		if (mWifiReceiver != null) {
 			unregisterReceiver(mWifiReceiver);
 		}
-
-		MobclickAgent.onPause(this);
 
 		Log.e(TAG, "onPause");
 	}
@@ -204,7 +197,7 @@ public class ServerControlActivity extends Activity {
     }
     
     public void updateUi() {
-    	WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+    	WifiManager wifiManager = (WifiManager)this.getApplicationContext().getSystemService(Context.WIFI_SERVICE);
     	int state = wifiManager.getWifiState();
     	String ssid = null;
     	WifiInfo wifiInfo = wifiManager.getConnectionInfo();

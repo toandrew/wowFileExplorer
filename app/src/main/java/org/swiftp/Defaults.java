@@ -99,7 +99,7 @@ public class Defaults {
 		Defaults.serverLogScrollBack = serverLogScrollBack;
 	}
 
-	protected static int settingsMode = Context.MODE_WORLD_WRITEABLE;
+	protected static int settingsMode = Context.MODE_PRIVATE;
 	
 	public static int getUiLogLevel() {
 		return uiLogLevel;
